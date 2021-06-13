@@ -1,0 +1,15 @@
+label{
+    margin-top: 1rem;
+}
+
+input.form-control, input.form-control:focus{
+    background-color: #f0f0ff;
+}
+.error{
+    position: absolute;
+    color: red;
+    font-size: 0.75rem;
+}
+input.form-control.is-invaliid{
+    border-color: red;
+}
