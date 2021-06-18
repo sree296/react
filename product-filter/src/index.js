@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {lazy, Suspense} from "react";
 import ReactDOM from 'react-dom';
-import App from './App';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
+const App = lazy (()=> import('./App'));
 
 const PRODUCTS = [
   {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'football'},
@@ -16,7 +17,9 @@ const PRODUCTS = [
 
 ReactDOM.render(
   <React.StrictMode>
-    <App products={PRODUCTS}/>
+    <Suspense fallback={<div>Loading...</div>}>
+        <App products={PRODUCTS}/>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );

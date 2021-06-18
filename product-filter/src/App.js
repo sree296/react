@@ -1,9 +1,10 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import Nav from './components/Nav';
 import Search from './components/Search';
-import ProductList from './components/ProductList';
+// import ProductList from './components/ProductList';
 import './App.css';
 
+const ProductList = lazy(()=> import ('./components/ProductList'));
 class App extends React.Component {  
    constructor(props){
       super(props);
@@ -27,10 +28,13 @@ class App extends React.Component {
                   searchText = {this.state.searchText}
                   onSearchTextChange = {this.handleSearchTextChange}
                />
-               <ProductList 
-               products={this.props.products}
-               searchText = {this.state.searchText}
-               />
+               <Suspense fallback={<div>Loading...</div>}>
+                     <ProductList 
+                     products={this.props.products}
+                     searchText = {this.state.searchText}
+                     />
+               </Suspense>
+               
             </div>
 
          </section>

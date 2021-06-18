@@ -1,4 +1,5 @@
 import React from 'react';
+import reactDom from 'react-dom';
 
 const Nav = () => {
     return(
