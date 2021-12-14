@@ -6,6 +6,7 @@ import NotesList from './components/NotesList';
 import {Note} from './Models/Models';
 import {Container, Row, Col} from 'react-bootstrap';
 import CreateNote from './components/CreateNote';
+
 function App() {
   const [notes, setNotes] = useState<Note[]>([{
     id: (new Date).toString(),
