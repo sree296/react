@@ -1,0 +1,26 @@
+.input{
+    display: block;
+    width: 200px;
+    padding: .375rem .75rem;
+    font-weight: 400;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+.small{
+    font-size: 0.75rem;
+    line-height: 1;
+    height: 1rem;
+}
+.medium{
+    font-size: 1rem;
+    line-height: 1.5;
+    height: 1.5rem;
+}
+.large{
+    font-size: 1.5rem;
+    line-height: 2;
+    height: 2rem;
+}
