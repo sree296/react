@@ -6,13 +6,12 @@ import Toolbar from '@mui/material/Toolbar';
 import ListItem from '@mui/material/ListItem';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { Link } from "react-router-dom";
 
 // Import Styles
 import './Header.scss';
 
 const Header = () => {
-  const pages = ['Home', 'Skills', 'Projects', 'Experience', 'Contact'];
-
   return (
     <AppBar position="fixed">
       <Container maxWidth="xl">
@@ -23,11 +22,11 @@ const Header = () => {
             </h6>
           </Typography>
           <List className="flex justify-between">
-            {pages.map((page) => (
-              <ListItem key={page}>
-                <Typography component="a" textAlign="center">{page}</Typography>
-              </ListItem>
-            ))}
+              <ListItem> <Link to="/home">Home</Link></ListItem>
+              <ListItem> <Link to="/skills">Skills</Link></ListItem>
+              <ListItem> <Link to="/projects">Projects</Link></ListItem>
+              <ListItem> <Link to="/experience">Experience</Link></ListItem>
+              <ListItem> <Link to="/contact">Contact</Link></ListItem>
           </List>
         </Toolbar>
       </Container>
